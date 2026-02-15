@@ -16,6 +16,22 @@ export const metadata: Metadata = {
   title: "GB Foods Conference 26",
   description:
     "Guide to Coffee Break, Dining, and Conference areas. Get directions to each space.",
+  icons: {
+    icon: "/favicon.svg",
+  },
+  openGraph: {
+    title: "GB Foods Conference 26",
+    description:
+      "Guide to Coffee Break, Dining, and Conference areas. Get directions to each space.",
+    images: ["/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GB Foods Conference 26",
+    description:
+      "Guide to Coffee Break, Dining, and Conference areas. Get directions to each space.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
