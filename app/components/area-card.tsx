@@ -64,12 +64,12 @@ export function AreaCard({ area, index }: AreaCardProps) {
 
   return (
     <article
-      className="group/card area-card relative overflow-hidden rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-amber-200/60 hover:shadow-lg hover:shadow-amber-500/10 focus-within:ring-2 focus-within:ring-amber-400/50 focus-within:ring-offset-2 dark:border-stone-700/80 dark:bg-stone-900/50 dark:hover:border-amber-400/30 dark:hover:shadow-amber-500/5"
+      className="group/card area-card relative overflow-hidden rounded-2xl border border-stone-200/80 bg-white p-6 shadow-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#ff5900]/40 hover:shadow-lg hover:shadow-[#ff5900]/20 focus-within:ring-2 focus-within:ring-[#ff5900]/60 focus-within:ring-offset-2 dark:border-stone-700/80 dark:bg-stone-900/50 dark:hover:border-[#ff5900]/50 dark:hover:shadow-[#ff5900]/15"
       style={{ animationDelay: `${index * 120}ms` }}
     >
-      <div className="absolute right-0 top-0 h-24 w-24 translate-x-4 -translate-y-4 rounded-full bg-amber-500/10 transition-transform duration-300 group-hover/card:scale-150 group-hover/card:bg-amber-500/20" />
+      <div className="absolute right-0 top-0 h-24 w-24 translate-x-4 -translate-y-4 rounded-full bg-[#ff5900]/10 transition-transform duration-300 group-hover/card:scale-150 group-hover/card:bg-[#ff5900]/20" />
       <div className="relative flex flex-col gap-4">
-        <div className="flex size-14 items-center justify-center rounded-xl bg-amber-500/15 text-amber-600 transition-colors duration-300 group-hover/card:bg-amber-500/25 group-hover/card:text-amber-700 dark:bg-amber-500/20 dark:text-amber-400 dark:group-hover/card:bg-amber-500/30 dark:group-hover/card:text-amber-300">
+        <div className="flex size-14 items-center justify-center rounded-xl bg-[#ff5900]/15 text-[#ff5900] transition-colors duration-300 group-hover/card:bg-[#ff5900]/25 group-hover/card:text-[#ff5900] dark:bg-[#ff5900]/20 dark:group-hover/card:bg-[#ff5900]/30">
           {ICONS[area.id]}
         </div>
         <div>
@@ -84,7 +84,7 @@ export function AreaCard({ area, index }: AreaCardProps) {
           href={mapUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group/btn inline-flex w-fit items-center gap-2 rounded-xl bg-stone-900 px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:scale-[1.02] hover:bg-amber-600 active:scale-[0.98] dark:bg-stone-100 dark:text-stone-900 dark:hover:bg-amber-500"
+          className="group/btn inline-flex w-fit items-center gap-2 rounded-xl bg-[#ff5900] px-4 py-2.5 text-sm font-medium text-white transition-all duration-200 hover:scale-[1.02] hover:bg-[#e64d00] active:scale-[0.98] dark:hover:bg-[#ff6b1a]"
         >
           <span>Get directions</span>
           <svg
