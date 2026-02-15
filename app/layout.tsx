@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Event Guide | Find Your Way",
-  description: "Guide to Coffee Break, Dining, and Conference areas. Get directions to each space.",
+  title: "GB Foods Conference 26",
+  description:
+    "Guide to Coffee Break, Dining, and Conference areas. Get directions to each space.",
 };
 
 export default function RootLayout({
@@ -25,8 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
     </html>

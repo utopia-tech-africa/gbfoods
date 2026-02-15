@@ -146,6 +146,153 @@ body {
   }
 }
 
+/* Dot pattern slow drift */
+.pattern-drift {
+  animation: pattern-drift 45s linear infinite;
+}
+
+@keyframes pattern-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 28px 28px;
+  }
+}
+
+/* Floating particles - small moving orbs */
+.bg-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 89, 0, 0.4);
+  filter: blur(2px);
+  will-change: transform;
+}
+
+.bg-particle.particle-1 {
+  width: 8px;
+  height: 8px;
+  top: 15%;
+  left: -20px;
+  animation: particle-float-1 25s ease-in-out infinite;
+}
+
+.bg-particle.particle-2 {
+  width: 6px;
+  height: 6px;
+  top: 40%;
+  right: -20px;
+  animation: particle-float-2 30s ease-in-out infinite;
+  animation-delay: -8s;
+}
+
+.bg-particle.particle-3 {
+  width: 10px;
+  height: 10px;
+  bottom: 25%;
+  left: -20px;
+  animation: particle-float-3 28s ease-in-out infinite;
+  animation-delay: -15s;
+}
+
+.bg-particle.particle-4 {
+  width: 5px;
+  height: 5px;
+  top: 70%;
+  right: -15px;
+  animation: particle-float-4 22s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.bg-particle.particle-5 {
+  width: 7px;
+  height: 7px;
+  top: 25%;
+  left: 30%;
+  animation: particle-float-5 35s ease-in-out infinite;
+  animation-delay: -20s;
+}
+
+.bg-particle.particle-6 {
+  width: 6px;
+  height: 6px;
+  bottom: 40%;
+  right: 20%;
+  animation: particle-float-6 32s ease-in-out infinite reverse;
+  animation-delay: -10s;
+}
+
+@keyframes particle-float-1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(calc(100vw + 40px), 20vh);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 0.4;
+  }
+}
+
+@keyframes particle-float-2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(-100vw - 40px), -15vh);
+  }
+}
+
+@keyframes particle-float-3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(100vw + 40px), -10vh);
+  }
+}
+
+@keyframes particle-float-4 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(-100vw - 40px), 12vh);
+  }
+}
+
+@keyframes particle-float-5 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(40vw, -80px) scale(1.2);
+  }
+  50% {
+    transform: translate(20vw, 30vh) scale(0.9);
+  }
+  75% {
+    transform: translate(-20vw, 10vh) scale(1.1);
+  }
+}
+
+@keyframes particle-float-6 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  33% {
+    transform: translate(-50vw, -60px);
+  }
+  66% {
+    transform: translate(-30vw, 25vh);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-fade-in,
   .area-card {
@@ -154,6 +301,11 @@ body {
   }
 
   .bg-blob {
+    animation: none !important;
+  }
+
+  .pattern-drift,
+  .bg-particle {
     animation: none !important;
   }
 }

@@ -18,15 +18,24 @@ export function InteractiveOrangeBackground() {
 
   return (
     <div className="fixed inset-0 overflow-hidden bg-[#0e0e0f]">
-      {/* Dot grid pattern - brand orange */}
+      {/* Dot grid pattern - brand orange, slow drift */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-40"
+        className="pattern-drift pointer-events-none absolute inset-0 opacity-40"
         style={{
           backgroundImage: "radial-gradient(circle at center, rgba(255,89,0,0.5) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
         aria-hidden
       />
+      {/* Floating particles - small orbs moving across the screen */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
+        <div className="bg-particle particle-1" />
+        <div className="bg-particle particle-2" />
+        <div className="bg-particle particle-3" />
+        <div className="bg-particle particle-4" />
+        <div className="bg-particle particle-5" />
+        <div className="bg-particle particle-6" />
+      </div>
       {/* Mouse-follow glow - brand orange */}
       <div
         className="pointer-events-none absolute inset-0 opacity-50 transition-opacity duration-300"

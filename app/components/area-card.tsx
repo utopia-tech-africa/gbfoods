@@ -1,57 +1,13 @@
 "use client";
 
+import { Coffee, HandPlatter, Presentation } from "lucide-react";
 import type { EventArea } from "@/app/lib/venue";
 import { getMapUrl } from "@/app/lib/venue";
 
 const ICONS: Record<EventArea["id"], React.ReactNode> = {
-  coffee: (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="size-10"
-      aria-hidden
-    >
-      <path d="M8 2v4M12 2v4M16 2v4" />
-      <path d="M6 6v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V6" />
-      <path d="M6 10h12" />
-      <path d="M9 18h6" />
-    </svg>
-  ),
-  dining: (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="size-10"
-      aria-hidden
-    >
-      <path d="M4 2v20M20 2v20" />
-      <path d="M4 12h16" />
-      <path d="M8 6v12M16 6v12" />
-    </svg>
-  ),
-  conference: (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="size-10"
-      aria-hidden
-    >
-      <path d="M2 6h20v12H2z" />
-      <path d="M7 10h2M15 10h2M7 14h4M13 14h2" />
-    </svg>
-  ),
+  coffee: <Coffee className="size-10" aria-hidden />,
+  dining: <HandPlatter className="size-10" aria-hidden />,
+  conference: <Presentation className="size-10" aria-hidden />,
 };
 
 type AreaCardProps = {
