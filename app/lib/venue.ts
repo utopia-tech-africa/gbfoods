@@ -5,7 +5,7 @@
 
 export const VENUE_ADDRESS = "Your Venue, Street Address, City";
 
-export type AreaId = "coffee" | "dining" | "conference";
+export type AreaId = "coffee" | "dining" | "conference" | "venue";
 
 export interface EventArea {
   id: AreaId;
@@ -18,6 +18,12 @@ export interface EventArea {
 }
 
 export const EVENT_AREAS: EventArea[] = [
+  {
+    id: "venue",
+    title: "Safari Valley Resort",
+    description: "The main event venue. Get directions to the resort.",
+    mapQuery: "Safari Valley Resort",
+  },
   {
     id: "coffee",
     title: "Coffee Break",
@@ -48,6 +54,6 @@ export function getMapUrl(area: EventArea): string {
   if (area.coordinates) {
     return `https://www.google.com/maps/search/?api=1&query=${area.coordinates.lat},${area.coordinates.lng}`;
   }
-  const query = `${VENUE_ADDRESS} - ${area.mapQuery}`;
+  const query = area.id === "venue" ? area.mapQuery : `${VENUE_ADDRESS} - ${area.mapQuery}`;
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }

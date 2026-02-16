@@ -5,23 +5,30 @@ import { EVENT_AREAS } from "@/app/lib/venue";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen overflow-y-auto md:h-screen md:overflow-hidden">
+    <div className="relative min-h-screen">
       <InteractiveOrangeBackground />
 
-      <div className="relative flex h-full min-h-screen flex-col md:h-screen">
-        <header className="relative shrink-0 pt-4 pb-2 md:pt-5 md:pb-3">
+      <div className="relative flex min-h-screen flex-col">
+        <header className="relative shrink-0 pt-4 pb-4 md:pt-6 md:pb-6">
           <Image
-            src="/favicon.svg"
-            alt="GB Foods"
-            width={140}
-            height={83}
-            className="animate-fade-in mx-auto block h-12 w-auto md:h-14 [animation-fill-mode:backwards]"
+            src="/logo-ghana.png"
+            alt="GB Foods Ghana"
+            width={200}
+            height={80}
+            className="animate-fade-in mx-auto block h-14 w-auto md:h-16 [animation-fill-mode:backwards]"
             priority
+          />
+          <Image
+            src="/conference-2026.png"
+            alt="Commercial Conference 2026"
+            width={400}
+            height={120}
+            className="animate-fade-in mx-auto mt-4 block h-16 w-auto md:mt-5 md:h-20 [animation-delay:60ms] [animation-fill-mode:backwards]"
           />
         </header>
 
-        <main className="relative mx-auto flex min-h-0 flex-1 flex-col justify-center px-4 py-6 md:max-w-4xl md:px-6 md:py-8">
-          <div className="mb-6 text-center md:mb-8">
+        <main className="relative mx-auto flex flex-1 flex-col px-4 py-8 md:max-w-4xl md:px-6 md:py-12">
+          <div className="mb-8 text-center md:mb-12">
             <p className="animate-fade-in text-xs font-medium uppercase tracking-widest text-[#ff5900] md:text-sm [animation-fill-mode:backwards]">
               Event Guide
             </p>
@@ -35,7 +42,7 @@ export default function Home() {
           </div>
 
           <section
-            className="grid items-start gap-4 sm:gap-5 md:grid-cols-3 md:gap-6"
+            className="grid items-start gap-5 sm:gap-6 md:grid-cols-2 md:gap-8"
             aria-label="Event areas"
           >
             {EVENT_AREAS.map((area, index) => (
@@ -43,11 +50,21 @@ export default function Home() {
             ))}
           </section>
 
-          <p className="mt-4 shrink-0 text-center text-xs text-white/75 md:mt-6 md:text-sm">
+          <p className="mt-8 shrink-0 text-center text-xs text-white/75 md:mt-10 md:text-sm">
             All areas are at the same venue. Buttons open your maps app for
             directions.
           </p>
         </main>
+
+        <footer className="relative shrink-0 px-4 pb-8 pt-12 md:px-6 md:pb-12 md:pt-16">
+          <Image
+            src="/footer-banner.png"
+            alt="Refuel to Win - Drive Growth. Lead with Proof."
+            width={600}
+            height={180}
+            className="mx-auto block w-full max-w-xl object-contain"
+          />
+        </footer>
       </div>
     </div>
   );

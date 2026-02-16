@@ -1,6 +1,6 @@
 "use client";
 
-import { Coffee, HandPlatter, Presentation } from "lucide-react";
+import { Coffee, HandPlatter, MapPin, Presentation } from "lucide-react";
 import type { EventArea } from "@/app/lib/venue";
 import { getMapUrl } from "@/app/lib/venue";
 
@@ -8,6 +8,7 @@ const ICONS: Record<EventArea["id"], React.ReactNode> = {
   coffee: <Coffee className="size-10" aria-hidden />,
   dining: <HandPlatter className="size-10" aria-hidden />,
   conference: <Presentation className="size-10" aria-hidden />,
+  venue: <MapPin className="size-10" aria-hidden />,
 };
 
 type AreaCardProps = {
