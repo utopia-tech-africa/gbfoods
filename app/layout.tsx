@@ -13,6 +13,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+  ),
   title: "GB Foods Conference 26",
   description:
     "Guide to Coffee Break, Dining, and Conference areas. Get directions to each space.",
